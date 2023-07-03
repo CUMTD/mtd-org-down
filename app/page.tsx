@@ -16,7 +16,7 @@ export default function Home() {
 					Please check <Link href="https://www.google.com/maps/dir/data=!3m1!4b1!4m5!4m4!1m1!4e1!1m0!3e3?entry=ttu" prefetch={true}>Google Maps</Link> or the <Link href="https://transitapp.com/">Transit App</Link> for <em>scheduled</em> information.
 				</p>
 				<p>
-					We'll be back with you soon. 
+					We&apos;ll be back with you soon. 
 					Follow us on social media for the latest updates.
 				</p>
 			</main>
