@@ -8,6 +8,10 @@ interface Props {
 	href: string;
 }
 
+function titleCase(val: string): string {
+	return val.substring(0, 1).toUpperCase() + val.substring(1);
+}
+
 export default function SocialLogo({ logoName, href }: Props) {
 	let logo: ReactElement | null = null;
 
@@ -33,7 +37,7 @@ export default function SocialLogo({ logoName, href }: Props) {
 
 
 	return (
-		<Link href={href} aria-label="MTD on Facebook" className={classes.socialLogo} prefetch={true}>
+		<Link href={href} aria-label={`Follow MTD on ${titleCase(logoName)}`} className={classes.socialLogo} prefetch={true}>
 			{logo}
 		</Link>
 	);

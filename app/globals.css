@@ -14,6 +14,8 @@
 	--logo-swoosh: var(--red);
 	--link: var(--dark-blue);
 	--link-underline: var(--light-blue);
+	--link-social-fill: var(--dark-blue);
+	--link-social-hover: var(--light-blue);
 
 	--font-size: 20px;
 	--social-size: 2rem;
@@ -33,8 +35,10 @@
 		--logo-letters: var(--white);
 		--link: var(--white);
 		--link-underline: var(--light-blue);
+		--link-social-fill: var(--white);
 		--link-social-hover: var(--red);
 		--link-focus: var(--light-blue);
+		--footer-bg: var(--dark-grey);
 	}
 }
 
@@ -99,7 +103,8 @@ p {
 	margin-top: 0.5rem;
 }
 
-a {
+a,
+a:visited {
 	color: var(--link);
 	text-decoration-color: var(--link-underline);
 	text-underline-offset: 0.15em;
