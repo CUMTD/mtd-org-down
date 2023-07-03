@@ -1,0 +1,12 @@
+.logo {
+	width: 10rem;
+	max-width: 80vw;
+}
+
+.logoLetters {
+	fill: var(--logo-letters);
+}
+
+.logoSwoosh {
+	fill: var(--logo-swoosh);
+}
