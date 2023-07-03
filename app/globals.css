@@ -12,10 +12,16 @@
 	--header2: var(--black);
 	--logo-letters: var(--light-blue);
 	--logo-swoosh: var(--red);
+	--link: var(--dark-blue);
+	--link-underline: var(--light-blue);
 
 	--font-size: 20px;
 	--social-size: 2rem;
-	--default-padding: 1rem;
+	--default-padding-top: 5vh clamp(1rem, 5vw, 3rem);
+	--default-padding-x: clamp(1rem, 5vw, 3rem);
+	--default-padding-bottom: 1rem;
+	--max-width: 70ch;
+	--layout-spacing: max(8vh, 3rem);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -25,18 +31,16 @@
 		--header1: var(--white);
 		--header2: var(--white);
 		--logo-letters: var(--white);
+		--link: var(--white);
+		--link-underline: var(--light-blue);
+		--link-social-hover: var(--red);
+		--link-focus: var(--light-blue);
 	}
 }
 
 * {
 	box-sizing: border-box;
 	margin: 0;
-}
-
-html,
-body {
-	margin: 0;
-	padding: 0;
 }
 
 html {
@@ -46,16 +50,68 @@ html {
 }
 
 body {
-	margin: 0;
-	padding: 0;
-	min-height: 100vh;
-	overflow-x: hidden;
 	display: flex;
-	flex-flow: column nowrap;
+	flex-direction: column;
+	min-height: 100vh;
+	padding: var(--default-padding-top) var(--default-padding-x) var(--default-padding-bottom);
+	line-height: 1.5;
+	color: var(--text);
 }
 
-header,
-main,
+body > * {
+	width: min(100%, var(--max-width));
+	margin-left: auto;
+	margin-right: auto;
+}
+
+body > * {
+	width: min(100%, var(--max-width));
+	margin-left: auto;
+	margin-right: auto;
+}
+
+main {
+	margin-top: var(--layout-spacing);
+}
+
 footer {
-	padding: var(--default-padding);
+	margin-top: auto;
+	padding-top: var(--layout-spacing);
+}
+
+:is(h1, h2, h3) {
+	line-height: 1.2;
+}
+
+:is(h2, h3):not(:first-child) {
+	margin-top: 2em;
+}
+
+article * + * {
+	margin-top: 1em;
+}
+
+:is(h1, h2, h3) + p {
+	margin-top: 1rem;
+}
+
+p {
+	margin-top: 0.5rem;
+}
+
+a {
+	color: var(--link);
+	text-decoration-color: var(--link-underline);
+	text-underline-offset: 0.15em;
+}
+
+a:focus {
+	outline: 0.1rem solid var(--link-focus);
+}
+a:focus:not(:focus-visible) {
+	outline: none;
+}
+
+a:focus-visible {
+	outline: 0.15rem solid var(--link-focus);
 }

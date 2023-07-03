@@ -1,6 +1,7 @@
 import classes from './logo.module.css';
 
 export default function Logo() {
+
 	return (
 		<div className={classes.logo}>
 			<svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" xmlSpace="preserve" version="1.1" viewBox="0 0 1366 768">
