@@ -1,11 +1,19 @@
-import { Overpass } from 'next/font/google'
-import './globals.css'
+import { Overpass } from 'next/font/google';
+import './globals.css';
 
 const overpass = Overpass({ subsets: ['latin'] })
 
+const title = 'MTD.org | Under Maintenance';
+const description = 'MTD.org is currently under maintenance. Please check back later and refer to the Maps and Schedules Book for more information.';
+
 export const metadata = {
-	title: 'MTD | Under Maintenance',
-	description: 'MTD.org is currently under maintenance. Please check back later and refer to the Maps and Schedules Book for more information.'
+	title,
+	description,
+	themeColor: '#002f87',
+	openGraph: {
+		title,
+		description
+	}
 }
 
 export default function RootLayout({
